@@ -1,15 +1,61 @@
 #include "unity.h"
 #include "Stack.h"
 
-void setUp(void)
-{
+
+static Stack* stack;
+
+void setUp(void) {
+  stack = Stack_Create(10);
 }
 
-void tearDown(void)
-{
+void tearDown(void) {
+  Stack_Destroy(stack);
 }
 
-void test_module_generator_needs_to_be_implemented(void)
-{
-	TEST_IGNORE_MESSAGE("Implement me!");
+void test_stack_create(void) {
 }
+
+//UnComment as you go, revealing one test at a time.
+//Build up the Stack as you go
+
+// void test_empty(void) {
+//   TEST_ASSERT_TRUE(Stack_isEmpty(stack));
+// }
+//
+// void test_not_empty(void) {
+//  	Stack_push(stack, 1);
+//  	TEST_ASSERT_FALSE(Stack_isEmpty(stack));
+// }
+//
+// void test_pop_empty(void) {
+//  	Stack_push(stack, 1);
+//  	Stack_pop(stack);
+//  	TEST_ASSERT_TRUE(Stack_isEmpty(stack));
+// }
+//
+// void test_push_pop_many(void) {
+//     Stack_push(stack, 1);
+//     Stack_push(stack, 1);
+//     Stack_pop(stack);
+//     TEST_ASSERT_TRUE(!Stack_isEmpty(stack));
+// }
+//
+// void test_push_value(void) {
+//     Stack_push(stack, 21);
+//     TEST_ASSERT_EQUAL(21, Stack_top(stack));
+// }
+//
+// void test_push_multiple_values(void) {
+//     Stack_push(stack, 21);
+//     Stack_push(stack, 28);
+//     Stack_push(stack, 12);
+//     TEST_ASSERT_EQUAL(12, Stack_top(stack));
+//     Stack_pop(stack);
+//     TEST_ASSERT_EQUAL(28, Stack_top(stack));
+//     Stack_pop(stack);
+//     TEST_ASSERT_EQUAL(21, Stack_top(stack));
+//     Stack_pop(stack);
+// }
+
+
+// What's next? ...
