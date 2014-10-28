@@ -3,13 +3,14 @@
 #include <memory.h>
 struct Stack
 {
-	int placeholder;
+	int isEmpty;
 };
 
 Stack* Stack_Create(int capacity)
 {
 	Stack* self = malloc(sizeof(Stack));
 	memset(self, 0, sizeof(Stack));
+  self->isEmpty = 1;
 	return self;
 }
 
@@ -18,6 +19,10 @@ void Stack_Destroy(Stack* self)
     free(self);
 }
 
-int Stack_isEmpty(Stack* stack) {
-  return 1;
+int Stack_IsEmpty(Stack* self) {
+  return self->isEmpty;
+}
+
+void Stack_Push(Stack* self, int val) {
+  self->isEmpty = 0;
 }

@@ -18,15 +18,15 @@ void test_stack_create(void) {
 //UnComment as you go, revealing one test at a time.
 //Build up the Stack as you go
 
- void test_empty(void) {
-   TEST_ASSERT_TRUE(Stack_isEmpty(stack));
- }
+void test_empty(void) {
+  TEST_ASSERT_TRUE(Stack_IsEmpty(stack));
+}
 
-// void test_not_empty(void) {
-//  	Stack_push(stack, 1);
-//  	TEST_ASSERT_FALSE(Stack_isEmpty(stack));
-// }
-//
+void test_not_empty(void) {
+  Stack_Push(stack, 1);
+  TEST_ASSERT_FALSE(Stack_IsEmpty(stack));
+}
+
 // void test_pop_empty(void) {
 //  	Stack_push(stack, 1);
 //  	Stack_pop(stack);
