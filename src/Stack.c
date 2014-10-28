@@ -17,3 +17,7 @@ void Stack_Destroy(Stack* self)
 {
     free(self);
 }
+
+int Stack_isEmpty(Stack* stack) {
+  return 1;
+}
