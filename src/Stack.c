@@ -2,19 +2,18 @@
 #include <stdlib.h>
 #include <memory.h>
 
-//static local variables
 struct Stack
 {
-	int count;
-	int * data;
+  int count;
+  int * data;
 };
 
 Stack* Stack_Create(int capacity)
 {
-	Stack* self = malloc(sizeof(Stack));
-	memset(self, 0, sizeof(Stack));
+  Stack* self = malloc(sizeof(Stack));
+  memset(self, 0, sizeof(Stack));
   self->data = calloc(capacity, sizeof(int));
-	return self;
+  return self;
 }
 
 void Stack_Destroy(Stack* self)
@@ -25,21 +24,21 @@ void Stack_Destroy(Stack* self)
 
 int Stack_isEmpty(Stack* self)
 {
-	return self->count == 0;
+  return self->count == 0;
 }
 
 void Stack_push(Stack* self, int i)
 {
-	self->data[self->count] = i;
-	self->count++;
+  self->data[self->count] = i;
+  self->count++;
 }
 
 void Stack_pop(Stack* self)
 {
-	self->count--;
+  self->count--;
 }
 
 int Stack_top(Stack* self)
 {
-	return self->data[self->count - 1];
+  return self->data[self->count - 1];
 }
