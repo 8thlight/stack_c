@@ -6,19 +6,21 @@
 struct Stack
 {
 	int count;
-	int data[10];
+	int * data;
 };
 
-Stack* Stack_Create(void)
+Stack* Stack_Create(int capacity)
 {
 	Stack* self = malloc(sizeof(Stack));
 	memset(self, 0, sizeof(Stack));
+  self->data = calloc(capacity, sizeof(int));
 	return self;
 }
 
 void Stack_Destroy(Stack* self)
 {
-    free(self);
+  free(self->data);
+  free(self);
 }
 
 int Stack_isEmpty(Stack* self)

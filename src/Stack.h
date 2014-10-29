@@ -3,7 +3,7 @@
 
 typedef struct Stack Stack;
 
-Stack* Stack_Create(void);
+Stack* Stack_Create(int capacity);
 void Stack_Destroy(Stack*);
 int Stack_isEmpty(Stack*);
 void Stack_push(Stack*, int i);

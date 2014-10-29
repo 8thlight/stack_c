@@ -5,7 +5,7 @@
 static Stack* stack;
 
 void setUp(void) {
-  stack = Stack_Create();
+  stack = Stack_Create(10);
 }
 
 void tearDown(void) {
