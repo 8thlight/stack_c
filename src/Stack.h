@@ -1,11 +1,13 @@
-#ifndef Stack_H
-#define Stack_H
+#ifndef D_Stack_H
+#define D_Stack_H
 
 typedef struct Stack Stack;
 
-Stack* Stack_Create(int);
+Stack* Stack_Create(void);
 void Stack_Destroy(Stack*);
-int Stack_IsEmpty(Stack*);
-void Stack_Push(Stack*, int);
+int Stack_isEmpty(Stack*);
+void Stack_push(Stack*, int i);
+void Stack_pop(Stack*);
+int Stack_top(Stack*);
 
-#endif // Stack_H
+#endif  // D_Stack_H
